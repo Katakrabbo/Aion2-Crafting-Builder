@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="it">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>AION 2 Crafting Builder by Katakrabbo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="wrap">
+        <h1>AION 2 — Universal Crafting Builder</h1>
+        <div class="note">The projects are demonstrative, not based on the official database. The attempt model is
+            deterministic and assumes ingredient consumption at each attempt.</div>
+        <section class="panel">
+            <h2>1 · Project and Objective</h2>
+            <div class="grid">
+                <div class="field"><label>Project</label><select id="project"></select></div>
+                <div class="field"><label>Final Object</label><select id="goal"></select></div>
+                <div class="field"><label>Desired Quantity</label><input id="qty" type="number" min="1" value="1">
+                </div>
+            </div>
+            <div class="row"><button id="newProject">+ New Project</button><button
+                    id="duplicate">Duplicate</button><button id="rename">Rename</button><button id="deleteProject"
+                    class="danger">Delete Project</button></div>
+        </section>
+        <section class="panel">
+            <h2>2 · Attempts for Result</h2>
+            <div id="sliders" class="grid"></div>
+        </section>
+        <section class="panel">
+            <h2>3 · Cumulative Bill of Materials</h2>
+            <p class="muted">The subrecipes are expanded automatically. The already owned material is subtracted
+                before starting the production of their subrecipes.</p>
+            <div id="summary" class="row"></div>
+            <div id="warnings" class="note" hidden></div>
+            <div class="tablewrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Material</th>
+                            <th>Required</th>
+                            <th>Owned</th>
+                            <th>To Purchase/Produce</th>
+                            <th>Unit Price</th>
+                            <th>Total Cost</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bill"></tbody>
+                </table>
+            </div>
+            <div class="row"><button id="exportCsv">Export CSV</button><button id="exportJson">Backup
+                    JSON</button><button id="importJson">Import JSON</button><input id="importFile" type="file"
+                    accept="application/json,.json" hidden></div>
+        </section>
+        <section class="panel">
+            <h2>4 · Universal Recipe Editor</h2>
+            <p class="muted">Each recipe produces an object identified by its name. To link a subrecipe,
+                use exactly the same name between product and ingredient. You can add recipes and ingredients without
+                modifying HTML.</p>
+            <div class="row"><button id="addRecipe">+ New Recipe</button></div>
+            <div id="recipes"></div>
+        </section>
+        <p class="muted">Crafted with lolilove by Katakrabbo</p>
+    </main>
+    <script src="script.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,167 @@
+:root {
+    color-scheme: dark
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    background: #0d1118;
+    color: #e8edf6;
+    font: 15px system-ui, Arial
+}
+
+.wrap {
+    max-width: 1250px;
+    margin: auto;
+    padding: 24px
+}
+
+h1 {
+    font-size: 25px
+}
+
+h2 {
+    font-size: 18px;
+    margin: 0 0 14px
+}
+
+.muted {
+    color: #aabbd3
+}
+
+.note {
+    background: #302a20;
+    border-left: 4px solid #e2a44b;
+    padding: 12px;
+    border-radius: 5px
+}
+
+.panel {
+    background: #181f2b;
+    border: 1px solid #36465e;
+    border-radius: 12px;
+    padding: 18px;
+    margin: 15px 0
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 12px
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px
+}
+
+input, select, button {
+    font: inherit;
+    border: 1px solid #455976;
+    background: #111926;
+    color: #fff;
+    border-radius: 6px;
+    padding: 8px;
+    min-width: 0
+}
+
+button {
+    background: #29435c;
+    cursor: pointer
+}
+
+button:hover {
+    background: #365c7e
+}
+
+button.danger {
+    background: #63343a
+}
+
+input[type=range] {
+    width: 100%;
+    padding: 0;
+    accent-color: #36b39b
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin: 12px 0
+}
+
+.stage {
+    padding: 14px;
+    border: 1px solid #455976;
+    border-radius: 9px;
+    background: #121a27
+}
+
+.stage strong {
+    display: block;
+    margin-bottom: 9px
+}
+
+.stage .num {
+    float: right;
+    color: #76ddc8
+}
+
+.tablewrap {
+    overflow: auto
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 650px
+}
+
+td, th {
+    padding: 9px;
+    text-align: left;
+    border-bottom: 1px solid #33435a
+}
+
+th {
+    color: #aabbd3
+}
+
+td input {
+    width: 115px
+}
+
+summary {
+    cursor: pointer;
+    font-weight: 650
+}
+
+.status {
+    color: #76ddc8
+}
+
+small {
+    color: #aabbd3
+}
+
+.recipe {
+    border: 1px solid #35465d;
+    border-radius: 8px;
+    padding: 12px;
+    margin: 10px 0
+}
+
+label {
+    font-size: 13px;
+    color: #b9cbe1
+}
+
+button:focus, input:focus, select:focus {
+    outline: 2px solid #40c5b3
+}
